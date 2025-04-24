@@ -41,7 +41,7 @@ for row in rows:
 
         deptos_info = {
             'id':id_depto,
-            'nome': nome_depto,
+            #'nome': nome_depto,
         }
 
         if deptos_info:
@@ -54,10 +54,26 @@ for row in rows:
 if deptos_data:
     df = pd.DataFrame(deptos_data)
     # Ordenar por nome do departamento
-    df = df.sort_values('nome')
+    #df = df.sort_values('nome')
     # Exportar para CSV
-    df.to_csv('departamentos_unb.csv', index=False, encoding='utf-8-sig')
-    print("Dados salvos com sucesso em 'departamentos_unb.csv'")
+    df.to_csv('departamentos_unb_2.csv', index=False, encoding='utf-8-sig')
+    print("Dados salvos com sucesso em 'departamentos_unb_2.csv'")
 else:
     print("Nenhum dado foi coletado.")
+
+'''
+
+import csv
+csv = 'departamentos_unb_2.csv'
+
+with open(csv,'r') as file:
+    csv_reader = csv.reader(file)
+    data_lista = []
+    for row in csv_reader:
+        data_lista.append(row)
+
+
+print(data_lista)
+'''
+
 
