@@ -215,7 +215,7 @@ def scrape_unb_classes(id_depto,debug=False):
         debug: Se True, salva as respostas HTML em arquivos para debug
     """
 
-    #count = 0
+    count = 0
     '''
     esta merda automatiza pegar as matérias de CADA DEPARTAMENTE, oque geral um alto fluxo de dados'''
     for id_atual in id_depto:
@@ -486,7 +486,7 @@ if __name__ == "__main__":
         '''
 
         import csv
-        csv_path = 'scraping/departamentos_unb_2.csv'
+        csv_path = 'dados/departamentos_unb_2.csv'
         count = 0
         with open(csv_path,'r') as file:
             csv_reader = csv.reader(file)
